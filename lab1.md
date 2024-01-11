@@ -64,3 +64,42 @@ Hello.class
 - This output is not an error.
 ---
 ## `cat`
+1. No arguments: `cat`
+```
+[user@sahara ~/lecture1]$ cat
+
+```
+- Working Directory: `~/lecture1`
+- Nothing was printed, and the prompt did not appear again for me to continue using commands. If the `cat` command is used without arguments, it will print out anything inputted to the terminal. For example, this is what happens if I type `Hello world` into the terminal:
+```
+[user@sahara ~/lecture1]$ cat
+Hello world
+Hello world
+
+```
+- This output is not an error.
+<br />
+
+2. Directory as an argument: `cat messages`
+```
+[user@sahara ~/lecture1]$ cat messages
+cat: messages: Is a directory
+[user@sahara ~/lecture1]$ 
+```
+- Working Directory: `~/lecture1`
+- The terminal printed an error message telling me that `messages` is a directory. This is because the `cat` command cannot print the contents of a directory.
+- This output is an error. The `cat` command prints the contents of one or more files, but it could not perform its intended purpose because I used a directory as an argument instead of a file.
+<br />
+
+3. File as an argument: `cat README`
+```
+[user@sahara ~/lecture1]$ cat README
+To use this program:
+
+javac Hello.java
+java Hello messages/en-us.txt
+[user@sahara ~/lecture1]$
+```
+- Working Directory: `~/lecture1`
+- The terminal printed the contents of the `README` file, which is in the `lecture1` directory. The `cat` command prints the contents of any files that are given as arguments.
+- This output is not an error.
