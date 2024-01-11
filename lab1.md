@@ -66,12 +66,16 @@ Hello.class
 - Working Directory: `~/lecture1`
 - Only the file `Hello.class` was printed because I used a file as an argument. If the `ls` command is run with a file as the argument, it will simply print that file.
 - This output is not an error.
+<br />
+
 ---
+
 ## `cat`
+
 1. No arguments: `cat`
 ```
 [user@sahara ~/lecture1]$ cat
-
+<br />
 ```
 - Working Directory: `~/lecture1`
 - Nothing was printed, and the prompt did not appear again for me to continue using commands. If the `cat` command is used without arguments, it will print out anything inputted to the terminal. For example, this is what happens if I type `Hello world` into the terminal:
