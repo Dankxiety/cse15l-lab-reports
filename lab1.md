@@ -29,6 +29,7 @@ bash: cd: Hello.java: Not a directory
 - Working Directory: `~/lecture1`
 - The terminal printed an error message telling me that `Hello.java` is not a directory and stayed in the `~/lecture1` directory because it could not change the working directory to a file.
 - This output is an error. The `cd` command is supposed to change the working directory, but since I inputted a file and not a directory, it could not change the working directory to the argument I inputted.
+<br />
 ---
 ## `ls`
 1. No arguments: `ls`
