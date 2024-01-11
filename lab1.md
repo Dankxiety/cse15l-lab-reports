@@ -29,3 +29,38 @@ bash: cd: Hello.java: Not a directory
 - Working Directory: `~/lecture1`
 - The terminal printed an error message telling me that `Hello.java` is not a directory and stayed in the `~/lecture1` directory because it could not change the working directory to a file.
 - This output is an error. The `cd` command is supposed to change the working directory, but since I inputted a file and not a directory, it could not change the working directory to the argument I inputted.
+---
+## `ls`
+1. No arguments: `ls`
+```
+[user@sahara ~/lecture1]$ ls
+Hello.class  Hello.java  messages  README
+[user@sahara ~/lecture1]$
+```
+- Working Directory: `~/lecture1`
+- The files `Hello.class`, `Hello.java`, and `README` and the directory **`messages`** were all printed to the terminal. These are all the files and directories within the `lecture1` directory. They were printed because the `ls` command with no arguments prints all the files and directories in the working directory.
+- This output is not an error.
+<br />
+
+2. Directory as an argument: `ls messages`
+```
+[user@sahara ~/lecture1]$ ls messages
+en-us.txt  es-mx.txt  is.txt  zh-cn.txt
+[user@sahara ~/lecture1]$ 
+```
+- Working Directory: `~/lecture1`
+- The files `en-us.txt`, `es-mx.txt`, `is.txt`, and `zh-cn.txt` were all printed to the terminal because these are the files in the `messages` directory. When `ls` is run with a directory as an argument, it prints all the files and directories within that directory.
+- This output is not an error.
+<br />
+
+3. File as an argument: `ls Hello.class`
+```
+[user@sahara ~/lecture1]$ ls Hello.class
+Hello.class
+[user@sahara ~/lecture1]$ 
+```
+- Working Directory: `~/lecture1`
+- Only the file `Hello.class` was printed because I used a file as an argument. If the `ls` command is run with a file as the argument, it will simply print that file.
+- This output is not an error.
+---
+## `cat`
