@@ -1,5 +1,5 @@
 # **North America**
-Canada\br
+Canada<br />
 United States\br
 Mexico\br
 Panama\br
