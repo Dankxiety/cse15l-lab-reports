@@ -103,7 +103,7 @@ cat: messages: Is a directory
 ```
 [user@sahara ~/lecture1]$ cat README
 To use this program:
-
+ 
 javac Hello.java
 java Hello messages/en-us.txt
 [user@sahara ~/lecture1]$
