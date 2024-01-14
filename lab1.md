@@ -79,12 +79,12 @@ Hello.class
 - Working Directory: `~/lecture1`
 - Nothing was printed, and the prompt did not appear again for me to continue using commands. If the `cat` command is used without arguments, it will print out anything inputted to the terminal. For example, this is what happens if I type `Hello world` into the terminal:
 
-<pre>
-[user@sahara ~/lecture1]$ cat
-Hello world
-Hello world
-
-</pre>
+  <pre>
+  [user@sahara ~/lecture1]$ cat
+  Hello world
+  Hello world
+  
+  </pre>
 - This output is not an error.
 <br />
 
