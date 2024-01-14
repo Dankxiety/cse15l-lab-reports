@@ -38,7 +38,7 @@ bash: cd: Hello.java: Not a directory
 1. No arguments: `ls`
 ```
 [user@sahara ~/lecture1]$ ls
-Hello.class  Hello.java  messages  README
+Hello.class  Hello.java  **messages**  README
 [user@sahara ~/lecture1]$
 ```
 - Working Directory: `~/lecture1`
@@ -75,7 +75,6 @@ Hello.class
 1. No arguments: `cat`
 ```
 [user@sahara ~/lecture1]$ cat
-  
 ```
 - Working Directory: `~/lecture1`
 - Nothing was printed, and the prompt did not appear again for me to continue using commands. If the `cat` command is used without arguments, it will print out anything inputted to the terminal. For example, this is what happens if I type `Hello world` into the terminal:
