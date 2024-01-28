@@ -23,7 +23,9 @@
 The absolute path to my private key is `C:\Users\Miao0\.ssh\id_rsa`.
 <br />
 ![Image](cse 15l lab2 pub key.png)
+<br />
 The absolute path to my public key is `/home/linux/ieng6/oce/7f/asdu/.ssh/authorized_keys`.
 <br />
 ![Image](cse 15l lab2 login.png)
+<br />
 This is a screenshot of me logging in to ieng6 without a password.
