@@ -32,4 +32,4 @@ This is a screenshot of me logging in to ieng6 without a password.
 <br />
 <br />
 # Part 3
-In the past two labs, I learned how to host a server both locally on my own computer and on the remote host `ieng6`. I can now build a (very simply) website that can be accessed by anyone on the UCSD network.
+In the past two labs, I learned how to host a server both locally on my own computer and on the remote host `ieng6`. I can now build a (very simple) website that can be accessed by anyone on the UCSD network.
