@@ -189,6 +189,7 @@ The previous code used a for loop to directly alter the array, replacing element
     government/Post_Rate_Comm/Redacted_Study.txt
     ```
     This prints the path of every file which contains the string "Canada" in `government`. This is useful for finding all the files that mention Canada.
+<br />
 4. `grep -i`
   - Example 1: `grep -i "biology" plos/*.txt`
     ```
@@ -205,4 +206,23 @@ The previous code used a for loop to directly alter the array, replacing element
     ... many more ...
     ```
     This prints every line containing "biology" in `plos` without case sensitivity. This is useful for making sure that all mentions of biology are included in the search, including instances where it may be at the beginning of a sentence or part of a proper noun.
-  - Example 2: `grep -i `
+  - Example 2: `grep -i "president" government/*/*.txt`
+    ```
+    $ grep -i "president" government/*/*.txt
+    government/About_LSC/Comments_on_semiannual.txt:President of the United States with the advice and consent of the
+    government/About_LSC/Comments_on_semiannual.txt:Senate. The Board appoints LSC's President, who serves as the
+    government/About_LSC/commission_report.txt:John McKay, President Danilo A. Cardona, A cting V ice President
+    government/About_LSC/commission_report.txt:Fortuno, V ice President for Legal A ffairs, General Counsel and
+    government/About_LSC/commission_report.txt:Corporate Secretary James J. Hogan, V ice President for A
+    government/About_LSC/commission_report.txt:dministration Mauricio Vivero, V ice President for Governmental
+    government/About_LSC/commission_report.txt:to the President John Kennedy, Director of A dministration and
+    government/About_LSC/commission_report.txt:are appointed by the President of the United States with the advice
+    government/About_LSC/commission_report.txt:of the demand for service. See id. The President of the North
+    government/About_LSC/commission_report.txt:Gilbert Casellas is currently the President and Chief Operating
+    government/About_LSC/commission_report.txt:civilian, and reserve attorneys. In 1994, President Clinton
+    government/About_LSC/commission_report.txt:has served as President of the Hispanic National Bar Association,
+    ... many more ...
+    ```
+    This prints every line containing "president" in `government` without case sensitivity. Again, this is useful for including all mentions of presidency, including those which are capitalised for any reason.
+<br />
+I found the documentation for all of these command-line options by using the command `man grep`.
