@@ -69,10 +69,9 @@ Tests run: 2,  Failures: 1
   }
   ```
 The previous code used a for loop to directly alter the array, replacing elements starting from the front with the corresponding elements starting from the end. However, because the array's new elements were pulled directly from the array itself, the latter half of the array would pull from the elements that had already been replaced; i.e. the second half of the array woud simply mirror the first. The new code fixes the issue by creating a temporary new array, copying the elements from the old array in reverse order, and then copying the elements from the new array into the old array.
-```
 <br />
 ## Part 2 - Researching Commands (grep)
-1. `grep -n`
+### 1. `grep -n`
   - Example 1: `grep -n "biomedical" biomed/*.txt`
     ```
     $ grep -n "biomedical" biomed/*.txt
@@ -106,7 +105,7 @@ The previous code used a for loop to directly alter the array, replacing element
     ```
     This prints every instance of the string "marital" in the `government` folder, along with the line numbers of every such instance. Again, this is useful for locating exactly where certain information pertaining to marriage appears.
 <br />
-2. `grep -c`
+### 2. `grep -c`
   - Example 1: `grep -c "heart" biomed/*.txt`
     ```
     $ grep -c "heart" biomed/*.txt
@@ -141,7 +140,7 @@ The previous code used a for loop to directly alter the array, replacing element
     ```
     This prints the number of lines in which the string "human" appears in every file in `plos`. This could be useful for "ranking" which files based on how much information they contain relevant to humans.
 <br />
-3. `grep -l`
+### 3. `grep -l`
   - Example 1: `grep -l "leaf" biomed/*.txt`
     ```
     $ grep -l "leaf" biomed/*.txt
@@ -190,7 +189,7 @@ The previous code used a for loop to directly alter the array, replacing element
     ```
     This prints the path of every file which contains the string "Canada" in `government`. This is useful for finding all the files that mention Canada.
 <br />
-4. `grep -i`
+### 4. `grep -i`
   - Example 1: `grep -i "biology" plos/*.txt`
     ```
     $ grep -i "biology" plos/*.txt
