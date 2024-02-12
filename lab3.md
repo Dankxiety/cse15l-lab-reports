@@ -1,4 +1,4 @@
-# Lab Report 2 - 8 Feb 2024
+# Lab Report 3 - 8 Feb 2024
 ## Part 1 - Bugs
 - Failure-inducing input:
 ```
