@@ -46,6 +46,7 @@ FAILURES!!!
 Tests run: 2,  Failures: 1
 ```
 - Bug:
+  <br />
   Before:
   ```
   static void reverseInPlace(int[] arr) {
@@ -54,7 +55,7 @@ Tests run: 2,  Failures: 1
     }
   }
   ```
-  After:
+  After
   ```
   static void reverseInPlace(int[] arr) {
     int[] newArr = new int[arr.length];
@@ -67,3 +68,4 @@ Tests run: 2,  Failures: 1
     }
   }
   ```
+The previous code used a for loop to directly alter the array, replacing elements starting from the front with the corresponding elements starting from the end. However, because the array's new elements were pulled directly from the array itself, the latter half of the array would pull from the elements that had already been replaced; i.e. the second half of the array woud simply mirror the first. The new code fixes the issue by creating a temporary new array, copying the elements from the old array in reverse order, and then copying the elements from the new array into the old array.
