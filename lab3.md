@@ -105,4 +105,104 @@ The previous code used a for loop to directly alter the array, replacing element
     government/Post_Rate_Comm/WolakSpeech_usps.txt:85:head and spouse, age and race of head and spouse, marital status,
     ```
     This prints every instance of the string "marital" in the `government` folder, along with the line numbers of every such instance. Again, this is useful for locating exactly where certain information pertaining to marriage appears.
-2. 
+<br />
+2. `grep -c`
+  - Example 1: `grep -c "heart" biomed/*.txt`
+    ```
+    $ grep -c "heart" biomed/*.txt
+    biomed/1468-6708-3-1.txt:1
+    biomed/1468-6708-3-10.txt:3
+    biomed/1468-6708-3-3.txt:3
+    biomed/1468-6708-3-4.txt:1
+    biomed/1468-6708-3-7.txt:14
+    biomed/1471-2091-2-10.txt:0
+    biomed/1471-2091-2-11.txt:0
+    biomed/1471-2091-2-12.txt:0
+    biomed/1471-2091-2-13.txt:0
+    biomed/1471-2091-2-16.txt:1
+    ... many more ...
+    ```
+    This prints the number of lines in which the string "heart" appears in every file in `biomed`. This could be useful for "ranking" files based on how much information they contain relating to the heart.
+  - Example 2: `grep -c "human" plos/*.txt`
+    ```
+    $ grep -c "human" plos/*.txt
+    plos/journal.pbio.0020001.txt:0
+    plos/journal.pbio.0020010.txt:0
+    plos/journal.pbio.0020012.txt:14
+    plos/journal.pbio.0020013.txt:0
+    plos/journal.pbio.0020019.txt:0
+    plos/journal.pbio.0020028.txt:3
+    plos/journal.pbio.0020035.txt:1
+    plos/journal.pbio.0020040.txt:2
+    plos/journal.pbio.0020042.txt:1
+    plos/journal.pbio.0020043.txt:4
+    plos/journal.pbio.0020046.txt:0
+    ... many more ...
+    ```
+    This prints the number of lines in which the string "human" appears in every file in `plos`. This could be useful for "ranking" which files based on how much information they contain relevant to humans.
+<br />
+3. `grep -l`
+  - Example 1: `grep -l "leaf" biomed/*.txt`
+    ```
+    $ grep -l "leaf" biomed/*.txt
+    biomed/1471-2164-4-26.txt
+    biomed/1471-2180-3-5.txt
+    biomed/1471-2229-1-3.txt
+    biomed/1471-2229-2-8.txt
+    biomed/1471-2229-2-9.txt
+    biomed/1472-6785-1-3.txt
+    biomed/1472-6785-2-7.txt
+    biomed/1472-6882-1-10.txt
+    biomed/1472-6882-1-7.txt
+    biomed/gb-2001-2-11-research0045.txt
+    biomed/gb-2002-3-9-research0045.txt
+    biomed/gb-2002-3-9-research0049.txt
+    biomed/gb-2003-4-1-r5.txt
+    biomed/gb-2003-4-3-r20.txt
+    ```
+    This prints the path of every file which contains the string "leaf" in `biomed`. This is useful for finding all the files that may contain information about leaves.
+  - Example 2: `grep -l "Canada" government/*/*.txt`
+    ```
+    $ grep -l "Canada" government/*/*.txt
+    government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
+    government/About_LSC/Progress_report.txt
+    government/About_LSC/Strategic_report.txt
+    government/Env_Prot_Agen/atx1-6.txt
+    government/Env_Prot_Agen/ctf1-6.txt
+    government/Env_Prot_Agen/ctm4-10.txt
+    government/Env_Prot_Agen/multi102902.txt
+    government/Env_Prot_Agen/ro_clear_skies_book.txt
+    government/Gen_Account_Office/ai00134.txt
+    government/Gen_Account_Office/ai9868.txt
+    government/Gen_Account_Office/d01376g.txt
+    government/Gen_Account_Office/d01591sp.txt
+    government/Gen_Account_Office/d0269g.txt
+    government/Gen_Account_Office/gg96118.txt
+    government/Gen_Account_Office/May1998_ai98068.txt
+    government/Gen_Account_Office/Oct15-2001_d0224.txt
+    government/Gen_Account_Office/pe1019.txt
+    government/Media/Assuring_Underprivileged.txt
+    government/Media/Few_who_need.txt
+    government/Post_Rate_Comm/Cohenetal_comparison.txt
+    government/Post_Rate_Comm/Cohenetal_Cost_Function.txt
+    government/Post_Rate_Comm/Mitchell_RMVancouver.txt
+    government/Post_Rate_Comm/Redacted_Study.txt
+    ```
+    This prints the path of every file which contains the string "Canada" in `government`. This is useful for finding all the files that mention Canada.
+4. `grep -i`
+  - Example 1: `grep -i "biology" plos/*.txt`
+    ```
+    $ grep -i "biology" plos/*.txt
+    plos/journal.pbio.0020001.txt:        the area of ecology (including the fields of evolutionary biology, conservation biology,
+    plos/journal.pbio.0020001.txt:        and global change biology) between 1990 and 2002 in both the two top general science
+    plos/journal.pbio.0020012.txt:        properties and physiological developments. “We've had a separation of the biology of ageing
+    plos/journal.pbio.0020028.txt:        biology in the last couple decades,” and since it was first recognized by Andrew Fire et
+    plos/journal.pbio.0020028.txt:        Biology at City of Hope Hospital in Duarte, California, who has worked on RNA-based
+    plos/journal.pbio.0020035.txt:        PloS Biology , is that the PKSs for these compounds consist of two
+    plos/journal.pbio.0020040.txt:        PLoS Biology , Trotman et al. (2003) used mouse models to describe how
+    plos/journal.pbio.0020042.txt:        into microarray analysis, proteomic initiatives, and even systems biology, it seems an
+    plos/journal.pbio.0020042.txt:        of its biology.
+    ... many more ...
+    ```
+    This prints every line containing "biology" in `plos` without case sensitivity. This is useful for making sure that all mentions of biology are included in the search, including instances where it may be at the beginning of a sentence or part of a proper noun.
+  - Example 2: `grep -i `
