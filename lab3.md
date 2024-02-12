@@ -41,7 +41,7 @@ Caused by: java.lang.AssertionError: expected:<9> but was:<2>
         at org.junit.internal.ExactComparisonCriteria.assertElementsEqual(ExactComparisonCriteria.java:8)
         at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:76)
         ... 38 more
-
+‎ 
 FAILURES!!!
 Tests run: 2,  Failures: 1
 ```
@@ -58,7 +58,7 @@ Tests run: 2,  Failures: 1
   ```
   static void reverseInPlace(int[] arr) {
     int[] newArr = new int[arr.length];
-
+‎ 
     for(int i = 0; i < arr.length; i += 1) {
       newArr[i] = arr[arr.length - i - 1];
     }
