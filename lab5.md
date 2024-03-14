@@ -4,7 +4,7 @@
 <br />
 Errors (there are more, they don't all fit in the screenshot):
 <br />
-
+![Error output](error output.png)
 <br />
 Testing script:
 ```
