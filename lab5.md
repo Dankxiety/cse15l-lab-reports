@@ -54,3 +54,4 @@ Command I ran to trigger the bug: `bash test.sh`
 How to fix the bug: Change the class header to `[...] implements MyList<E> {` so that the `MyList` interface has a generic type.
 
 ## Part 2 - Reflection
+An interesting thing I learned about during lab this quarter was scripting with bash. I had previously had absolutely no knowledge of bash, or even of how to do almost anything from the terminal. Now I can not only run and debug programs from the terminal, I can also make the manual process much more efficient by writing bash scripts to automate much of the process. I appreciate the exposure to a programming language other than Java, which I had already had a fair amount of knowledge of from high school comp sci classes.
